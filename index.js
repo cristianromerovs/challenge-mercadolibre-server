@@ -1,8 +1,9 @@
-const express = require('express')
+const express = require('express');
 const app = express()
 
-app.get("/api", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree", "userFour"]})
-})
+//Rutas
+const routes = require('./src/routes/index.routes');
 
-app.listen(8000, () => {console.log("Server running at port: 8000")})
+app.use(routes);
+
+app.listen(8000, () => {console.log("Server running at port: 8000")});
