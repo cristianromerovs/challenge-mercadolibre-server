@@ -3,14 +3,14 @@ const mercadoLibre = new MercadolibreService()
 
 exports.getShipment = async (req, res) => {
     try {
-        const shipment = await mercadoLibre.getUser();
+        const shipment = await mercadoLibre.getShipment(req.params.id);
         
         res.status(200).json({
             data: shipment
         })
     } catch (err) {
         res.status(400).json({
-            message: "error getting user",
+            message: "error getting shipment data",
             error: err
         });
     }

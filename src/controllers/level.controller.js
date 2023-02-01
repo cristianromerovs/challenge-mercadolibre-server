@@ -11,7 +11,7 @@ exports.getLevel = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            message: "error getting user",
+            message: "error getting level data",
             error: err
         });
     }

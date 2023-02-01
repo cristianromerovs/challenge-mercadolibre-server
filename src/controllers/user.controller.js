@@ -10,7 +10,7 @@ exports.getUser = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            message: "error getting user",
+            message: "error getting user data",
             error: err
         });
     }
@@ -24,7 +24,7 @@ exports.getUserRestrictions = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            message: "error getting user",
+            message: "error getting user restrictions",
             error: err
         });
     }

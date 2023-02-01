@@ -11,8 +11,8 @@ router.get('/user/', userController.getUser)
 router.get('/user/:id/restrictions', userController.getUserRestrictions)
 router.get('/user/:id/purchases', userController.getUserPurchases)
 router.get('/level', levelController.getLevel)
-router.get('/shipment', shipmentController.getShipment)
-router.get('/payment', paymentController.getPayment)
+router.get('/shipment/:id', shipmentController.getShipment)
+router.get('/payment/:id', paymentController.getPayment)
 
 router.get('*', (req, res) => {
     res.status(404).send('Ruta no encontrada');
